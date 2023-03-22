@@ -1,0 +1,500 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Fumigator Ltd</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Cleaning Company Website Template" name="keywords">
+        <meta content="Cleaning Company Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Header Start -->
+            <div class="header home">
+                <div class="container-fluid">
+                    <div class="header-top row align-items-center">
+                        <div class="col-lg-3">
+                            <div class="brand w-50" >
+                                <img src="11.png">
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            
+                            <div class="navbar navbar-expand-lg bg-light navbar-light">
+                                <a href="#" class="navbar-brand">MENU</a>
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                                    <div class="navbar-nav ml-auto">
+                                        <a href="index.php" class="nav-item nav-link active">Home</a>
+                                        <a href="#about1" class="nav-item nav-link">About</a>
+                                        <a href="#service1" class="nav-item nav-link">Service</a>
+                                        <a href="#infoo" class="nav-item nav-link">Information</a>
+                                        <a href="#price" class="nav-item nav-link">Pricing</a>
+                                        <a href='login.php' class='btn' style='font-size: 15px;'><b>Login</b></a>";
+                                        <!-- <a href='index.php' class='btn' style='font-size: 15px;'><b>".$user."</b></a>"; -->
+                                        <a href="logout.php" class="btn" style="font-size: 15px;"><b>LogOut</b></a>
+                                    }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero row align-items-center">
+                        <div class="col-md-7">
+                            <h2>Best & Trusted</h2>
+                            <h2><span>Cleaning & Fumigation</span> Service</h2>
+                        </div>
+                        <div class="col-md-5" id="bookk">
+                            <div class="form">
+                                <h3>Offer Services</h3>
+                                <form action="pay.php" method="post">
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <input class="form-control" type="hidden" name="username" value="<?php echo $_SESSION['usernamee']; ?>" required>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <input class="form-control" type="hidden" name="email" value="<?php echo $_SESSION['email']; ?>" required>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <input class="form-control" type="hidden" name="phone" value="<?php echo $_SESSION['phone']; ?>" required>
+                                        </div>
+
+                                        <div class="col-md-12 form-group">
+                                            <select class="custom-select" id="city" name="city" required>
+                                              <option selected>Select your location</option>
+                                              <option value="Kigali">Kigali</option>
+                                              <option value="Northern">Northern Province</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <select class="custom-select" name="district" id="district" required>
+                                              <option selected>Choose district</option>
+                                              <option value="Gasabo" id="option1">Gasabo</option>
+                                              <option value="Kicukiro" id="option2">Kicukiro</option>
+                                              <option value="Nyarugenge" id="option3">Nyarugenge</option>
+                                            </select>
+                                            
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                          <input type="text" id="avenue" name="avenue" placeholder="Format: kk-234-34" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <select class="custom-select" name="service" id="service" required>
+                                                <option selected>Choose Services</option>
+                                                <option value="House cleaning">House Cleaning</option>
+                                                <option value="Garden cleaning">Garden Cleaning</option>
+                                                <option value="Fumigation">Fumigation</option>
+                                                <option value="Painting">Painting</option>
+                                              </select>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                          <select class="custom-select" name="service_type" id="service_type" required>
+                                            <option selected>Choose Facility</option>
+                                            <option value="House">House</option>
+                                            <option value="Building">Building</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6 form-group">
+                                            <input type="date" name="date" class="form-control" value="" required="required"/>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                          <input type="time" class="form-control" name="time" value="" required="required" />
+                                        </div>
+                                    </div>
+                                    <textarea class="form-control" name="description" id="description" placeholder="Add other suggestion"></textarea>
+                                    <button type="#" class="btn btn-block">Book Service</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header End -->
+            
+            
+            <!-- About Start -->
+            <div class="about" id="about1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6">
+                            <div class="about-img">
+                                <img src="img/about.jpg" alt="Image">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-6">
+                            <div class="about-text">
+                                <h2><span>10</span> Years Experience</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About End -->
+
+
+            <!-- Service Start -->
+            <div class="service" id="service1">
+                <div class="container">
+                    <div class="section-header">
+                        <p>Our Services</p>
+                        <h2>Provide Services For Cleaning</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="img/service-1.jpg" alt="Service">
+                                <h3>House Interior Cleaning</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="img/service-2.jpg" alt="Service">
+                                <h3>Garden Cleaning</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="img/service-3.jpg" alt="Service">
+                                <h3>Fumigation Service</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item">
+                                <img src="img/service-4.jpg" alt="Service">
+                                <h3>Painting Service</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Service End -->
+            
+            
+            <!-- Feature Start -->
+            <div class="feature" id="infoo">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="section-header left">
+                                <p>Why Choose Us</p>
+                                <h2>Expert Cleaners and World Class Services</h2>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+                            </p>
+                            
+                        </div>
+                        <div class="col-md-7">
+                            <div class="row align-items-center feature-item">
+                                <div class="col-5">
+                                    <img src="img/feature-1.jpg" alt="Feature">
+                                </div>
+                                <div class="col-7">
+                                    <h3>Expert Cleaners</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row align-items-center feature-item">
+                                <div class="col-5">
+                                    <img src="img/feature-2.jpg" alt="Feature">
+                                </div>
+                                <div class="col-7">
+                                    <h3>Reasonable Prices</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row align-items-center feature-item">
+                                <div class="col-5">
+                                    <img src="img/feature-3.jpg" alt="Feature">
+                                </div>
+                                <div class="col-7">
+                                    <h3>Quick & Best Services</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Feature End -->
+            
+            
+            
+            <!-- Pricing Plan Start -->
+            <div class="price" id="price">
+                <div class="container">
+                    <div class="section-header">
+                        <p>Pricing Plan</p>
+                        <h2>No Extra Hidden Charges</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="price-item">
+                                <div class="price-header">
+                                    <div class="price-icon">
+                                        <i class="fa fa-home"></i>
+                                    </div>
+                                    <div class="price-title">
+                                        <h2>House cleaning</h2>
+                                    </div>
+                                    <div class="price-pricing">
+                                        <h3><small>Rwf</small>30.000</h3>
+                                    </div>
+                                </div>
+                                <div class="price-body">
+                                    <div class="price-des">
+                                        <ul>
+                                            <li>Bedrooms cleaning</li>
+                                            <li>Bathrooms cleaning</li>
+                                            <li>Living room Cleaning</li>
+                                            <li>Vacuum Cleaning</li>
+                                            <li>Within 6 Hours</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="price-footer">
+                                    <div class="price-action">
+                                        <a href="#bookk" id="book"><i class="fa fa-shopping-cart" ></i>Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="price-item featured-item">
+                                <div class="price-header">
+                                    <div class="price-icon">
+                                        <i class="fas fa-tree"></i>
+                                    </div>
+                                    <div class="price-title">
+                                        <h2>Garden cleaning</h2>
+                                    </div>
+                                    <div class="price-pricing">
+                                        <h3><small>Rwf</small>50.000</h3>
+                                    </div>
+                                </div>
+                                <div class="price-body">
+                                    <div class="price-des">
+                                        <ul>
+                                            <li>5 Bedrooms cleaning</li>
+                                            <li>3 Bathrooms cleaning</li>
+                                            <li>2 Living room Cleaning</li>
+                                            <li>Vacuum Cleaning</li>
+                                            <li>Within 6 Hours</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="price-footer">
+                                    <div class="price-action">
+                                        <a href="#bookk" id="book"><i class="fa fa-shopping-cart"></i>Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="price-item">
+                                <div class="price-header">
+                                    <div class="price-icon">
+                                        <i class="fas fa-paint-roller"></i>
+                                    </div>
+                                    <div class="price-title">
+                                        <h2>Painting</h2>
+                                    </div>
+                                    <div class="price-pricing">
+                                        <h3><small>Rwf</small>15.000</h3>
+                                    </div>
+                                </div>
+                                <div class="price-body">
+                                    <div class="price-des">
+                                        <ul>
+                                            <li>Bedrooms painting</li>
+                                            <li>Bathrooms painting</li>
+                                            <li>Living room painting</li>
+                                            <li>Outdoor painting</li>
+                                            <li>Within 12 Hours</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="price-footer">
+                                    <div class="price-action">
+                                        <a href="#bookk" id="book"><i class="fa fa-shopping-cart"></i>Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="price-item">
+                                <div class="price-header">
+                                    <div class="price-icon">
+                                        <i class="fab fa-cloudversify"></i>
+                                    </div>
+                                    <div class="price-title">
+                                        <h2>Fumigation</h2>
+                                    </div>
+                                    <div class="price-pricing">
+                                        <h3><small>Rwf</small>60.000</h3>
+                                    </div>
+                                </div>
+                                <div class="price-body">
+                                    <div class="price-des">
+                                        <ul>
+                                            <li>House cleaning</li>
+                                            <li>Building cleaning</li>
+                                            <li>Within 12 Hours</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="price-footer">
+                                    <div class="price-action">
+                                        <a href="#bookk" id="book"><i class="fa fa-shopping-cart"></i>Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Pricing Plan End -->
+
+            <!-- Footer Start -->
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="footer-contact">
+                                <h2>Get In Touch</h2>
+                                <p><i class="fa fa-map-marker-alt"></i>18 KG 33 Ave, Kigali</p>
+                                <p><i class="fa fa-phone-alt"></i>+250 ** *** ***</p>
+                                <p><i class="fa fa-envelope"></i>Fumigator@gmail.com</p>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="footer-link">
+                                <h2>Useful Link</h2>
+                                <a href="#">About Us</a>
+                                <a href="#">Our Story</a>
+                                <a href="#">Our Services</a>
+                                <a href="#">Our Projects</a>
+                                <a href="#">Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="footer-link">
+                                <h2>Useful Link</h2>
+                                <a href="#">Our Clients</a>
+                                <a href="#">Clients Review</a>
+                                <a href="#">Ongoing Project</a>
+                                <a href="#">Customer Support</a>
+                                <a href="#">FAQs</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="footer-form">
+                                <h2>Meet us Here</h2>
+                                <p>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.582448258907!2d30.069997914278!3d-1.918248337181875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca1ce753960c9%3A0xb1540952718a7fb7!2sCity%20Fumigators%20ltd!5e0!3m2!1sfr!2srw!4v1669187323463!5m2!1sfr!2srw" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- Footer End -->
+            
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        <script type="text/javascript">
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            function _0x1101(){var _0x30cad1=['143YKtvRS','Gicumbi','removeAttr','value','option1','932850kNMmWZ','2351482XfixHw','Hello\x20World!','Kigali','3gZNrni','disabled','attr','333576WexCmZ','option2','6jZYapD','244526mIJbtJ','getElementById','innerHTML','Gasabo','Gakenke','Kicukiro','1857giydZb','Nyarugenge','1750310zafApq','option3','8RkExwm','#district','22olfPzM','310095YiDRSa','2044olIZlf'];_0x1101=function(){return _0x30cad1;};return _0x1101();}var _0x119d36=_0x5087;(function(_0x3470bd,_0x5022ef){var _0x32630f=_0x5087,_0x31373a=_0x3470bd();while(!![]){try{var _0x50effb=-parseInt(_0x32630f(0x18a))/0x1*(-parseInt(_0x32630f(0x190))/0x2)+parseInt(_0x32630f(0x196))/0x3*(parseInt(_0x32630f(0x180))/0x4)+parseInt(_0x32630f(0x186))/0x5*(-parseInt(_0x32630f(0x18f))/0x6)+parseInt(_0x32630f(0x187))/0x7+parseInt(_0x32630f(0x19a))/0x8*(parseInt(_0x32630f(0x17f))/0x9)+-parseInt(_0x32630f(0x198))/0xa*(parseInt(_0x32630f(0x19c))/0xb)+parseInt(_0x32630f(0x18d))/0xc*(-parseInt(_0x32630f(0x181))/0xd);if(_0x50effb===_0x5022ef)break;else _0x31373a['push'](_0x31373a['shift']());}catch(_0x3dccb4){_0x31373a['push'](_0x31373a['shift']());}}}(_0x1101,0x3387d),$(_0x119d36(0x19b))[_0x119d36(0x18c)](_0x119d36(0x18b),_0x119d36(0x18b)),$('#city')['on']('change',function(){var _0x47dac5=_0x119d36,_0x38f5c6=this['value'];if(_0x38f5c6==_0x47dac5(0x189))document['getElementById'](_0x47dac5(0x185))[_0x47dac5(0x184)]=_0x47dac5(0x193),document['getElementById'](_0x47dac5(0x18e))[_0x47dac5(0x184)]='Kicukiro',document[_0x47dac5(0x191)](_0x47dac5(0x199))['value']=_0x47dac5(0x197),document[_0x47dac5(0x191)](_0x47dac5(0x185))[_0x47dac5(0x192)]=_0x47dac5(0x193),document[_0x47dac5(0x191)](_0x47dac5(0x18e))[_0x47dac5(0x192)]=_0x47dac5(0x195),document['getElementById'](_0x47dac5(0x199))[_0x47dac5(0x192)]=_0x47dac5(0x197),$(_0x47dac5(0x19b))[_0x47dac5(0x183)](_0x47dac5(0x18b));else _0x38f5c6=='Northern'?(document[_0x47dac5(0x191)](_0x47dac5(0x185))[_0x47dac5(0x184)]='Musanze',document['getElementById'](_0x47dac5(0x18e))[_0x47dac5(0x184)]=_0x47dac5(0x194),document[_0x47dac5(0x191)](_0x47dac5(0x199))[_0x47dac5(0x184)]=_0x47dac5(0x182),document[_0x47dac5(0x191)](_0x47dac5(0x185))['innerHTML']='Musanze',document[_0x47dac5(0x191)](_0x47dac5(0x18e))[_0x47dac5(0x192)]='Gakenke',document[_0x47dac5(0x191)]('option3')[_0x47dac5(0x192)]='Gicumbi',$(_0x47dac5(0x19b))[_0x47dac5(0x183)](_0x47dac5(0x18b))):($(_0x47dac5(0x19b))['show'](),$('#district')['attr'](_0x47dac5(0x18b),'disabled'));}));function _0x5087(_0x4f58ec,_0x5bb372){var _0x1101cd=_0x1101();return _0x5087=function(_0x5087f5,_0x57c0aa){_0x5087f5=_0x5087f5-0x17f;var _0x558968=_0x1101cd[_0x5087f5];return _0x558968;},_0x5087(_0x4f58ec,_0x5bb372);}function hi(){var _0x18d569=_0x119d36;console['log'](_0x18d569(0x188));}hi();
+        </script>
+    </body>
+</html>
+<!-- <?php 
+// }else{
+//      header("Location: login.php");
+//      exit();
+//}
+ ?> -->
